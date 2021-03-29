@@ -28,7 +28,12 @@ sudo apt install -y nano htop curl unzip
 #stow -nvt ~ *
 
 echo
-echo "Installing nano syntax support"
+echo "Linking .bash_aliases..."
+rm -rf ~/.bash_aliases
+ln -s ~/dotfiles/.bash_aliases ~/.bash_aliases
+
+echo
+echo "Installing nano syntax support..."
 wget -qO nanorc.zip https://github.com/scopatz/nanorc/archive/refs/heads/master.zip
 unzip -qq nanorc.zip
 rm -rf nanorc.zip ~/.nanorc
